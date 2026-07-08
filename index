@@ -1,0 +1,138 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>TheGrowthCo. | GitHub Pages Test</title>
+
+    <style>
+        *{
+            margin:0;
+            padding:0;
+            box-sizing:border-box;
+        }
+
+        body{
+            font-family:Arial, Helvetica, sans-serif;
+            background:#f4f7fc;
+            color:#333;
+        }
+
+        header{
+            background:#0d6efd;
+            color:#fff;
+            text-align:center;
+            padding:60px 20px;
+        }
+
+        header h1{
+            font-size:3rem;
+            margin-bottom:10px;
+        }
+
+        header p{
+            font-size:1.2rem;
+            opacity:.9;
+        }
+
+        main{
+            max-width:900px;
+            margin:60px auto;
+            padding:0 20px;
+        }
+
+        .card{
+            background:#fff;
+            border-radius:15px;
+            padding:40px;
+            box-shadow:0 10px 30px rgba(0,0,0,.08);
+            text-align:center;
+        }
+
+        h2{
+            color:#0d6efd;
+            margin-bottom:20px;
+        }
+
+        p{
+            line-height:1.8;
+            margin-bottom:25px;
+        }
+
+        button{
+            background:#0d6efd;
+            color:#fff;
+            border:none;
+            padding:15px 35px;
+            border-radius:8px;
+            font-size:16px;
+            cursor:pointer;
+            transition:.3s;
+        }
+
+        button:hover{
+            background:#084298;
+            transform:translateY(-2px);
+        }
+
+        #message{
+            margin-top:25px;
+            font-size:18px;
+            font-weight:bold;
+            color:#198754;
+        }
+
+        footer{
+            margin-top:80px;
+            text-align:center;
+            padding:30px;
+            color:#666;
+        }
+    </style>
+</head>
+
+<body>
+
+<header>
+    <h1>TheGrowthCo.</h1>
+    <p>GitHub Pages Test Website</p>
+</header>
+
+<main>
+
+    <div class="card">
+
+        <h2>🚀 Welcome!</h2>
+
+        <p>
+            If you're seeing this page on GitHub Pages, your website has been
+            deployed successfully.
+        </p>
+
+        <p>
+            Click the button below to test whether JavaScript is working correctly.
+        </p>
+
+        <button id="testBtn">Test JavaScript</button>
+
+        <div id="message"></div>
+
+    </div>
+
+</main>
+
+<footer>
+    © 2026 TheGrowthCo. | GitHub Pages Test
+</footer>
+
+<script>
+    document.getElementById("testBtn").addEventListener("click", function () {
+
+        document.getElementById("message").innerHTML =
+            "✅ Success! HTML, CSS & JavaScript are all working correctly. Your GitHub Pages setup is ready.";
+
+    });
+</script>
+
+</body>
+</html>
