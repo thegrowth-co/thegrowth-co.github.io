@@ -175,10 +175,43 @@ em, .italic { font-style: italic; }
 }
 .hero-meta .stat .lbl { color: var(--muted); font-size: .85rem; }
 
-/* Sections */
-.section-head { display: grid; grid-template-columns: 1fr 1fr; gap: 3rem; align-items: end; margin-bottom: 3rem; }
-.section-head .lead { margin-top: 1rem; }
-@media (max-width: 900px) { .section-head { grid-template-columns: 1fr; gap: 1.25rem; } }
+/* ====================================
+   Section Head
+==================================== */
+
+.section-head{
+    display:grid;
+    grid-template-columns:1fr 1fr;
+    align-items:center;
+    gap:4rem;
+    margin-bottom:4rem;
+}
+
+.section-head h2{
+    max-width:10ch;
+}
+
+.section-head .lead{
+    max-width:42ch;
+    margin:0;
+    line-height:1.75;
+}
+
+@media(max-width:900px){
+
+    .section-head{
+        display:flex;
+        flex-direction:column;
+        align-items:flex-start;
+        gap:1rem;
+    }
+
+    .section-head h2,
+    .section-head .lead{
+        max-width:100%;
+    }
+
+}
 
 /* Cards */
 .card {
@@ -332,14 +365,66 @@ em, .italic { font-style: italic; }
   content: ""; position: absolute; left: 0; top: .65em; width: 8px; height: 1px; background: var(--ink);
 }
 
-/* Industries chips */
-.chips { display: flex; flex-wrap: wrap; gap: .55rem; margin-top: 1.25rem; }
-.chip {
-  border: 1px solid var(--line); border-radius: 999px; padding: .55rem .9rem;
-  font-size: .88rem; color: var(--ink-2); background: #fff;
-  transition: border-color var(--transition), color var(--transition);
+/* ====================================
+   Industries
+==================================== */
+
+.chips{
+
+    display:flex;
+    justify-content:center;
+    flex-wrap:wrap;
+
+    gap:.85rem;
+
+    max-width:980px;
+    margin:2rem auto 0;
+
+    padding:2.5rem;
+
+    background:#fff;
+
+    border:1px solid var(--line);
+
+    border-radius:22px;
+
 }
-.chip:hover { border-color: var(--ink); color: var(--ink); }
+
+.chip{
+
+    border:1px solid var(--line);
+
+    border-radius:999px;
+
+    padding:.8rem 1.35rem;
+
+    font-size:.93rem;
+
+    transition:all .3s ease;
+
+}
+
+.chip:hover{
+
+    background:var(--ink);
+
+    color:#fff;
+
+    border-color:var(--ink);
+
+    transform:translateY(-2px);
+
+}
+
+@media(max-width:768px){
+
+    .chips{
+
+        padding:1.5rem;
+
+    }
+
+}
 
 /* Marquee (subtle) */
 .marquee {
@@ -411,3 +496,59 @@ em, .italic { font-style: italic; }
 .mt-4 { margin-top: 2rem; }
 .mt-6 { margin-top: 3rem; }
 .text-center { text-align: center; }
+
+/* ====================================
+   Service Page Layout Overrides
+==================================== */
+
+/* Process */
+
+.steps+.section-head,
+.section-alt .section-head{
+
+    display:flex;
+
+    flex-direction:column;
+
+    align-items:center;
+
+    text-align:center;
+
+    gap:1rem;
+
+}
+
+.section-alt .section-head h2,
+.section-alt .section-head .lead{
+
+    max-width:760px;
+
+}
+
+/* FAQ */
+
+.faq{
+
+    max-width:900px;
+
+    margin:auto;
+
+}
+
+/* CTA */
+
+.cta-band{
+
+    overflow:hidden;
+
+}
+
+/* Better spacing */
+
+.section:nth-of-type(even){
+
+    padding-top:7rem;
+
+    padding-bottom:7rem;
+
+}
