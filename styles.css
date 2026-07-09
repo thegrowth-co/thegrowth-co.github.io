@@ -200,47 +200,73 @@ em, .italic { font-style: italic; }
 .hero h1 { max-width: 18ch; }
 .hero h1 em { font-style: italic; color: var(--accent); font-weight: 400; }
 .hero p.lead { margin-top: 1.25rem; }
-.hero .cta-row { margin-top: 1.75rem; }
-.hero-meta {
-  display: flex; flex-wrap: wrap; gap: 1.5rem 2rem; margin-top: 3rem;
-  padding-top: 1.75rem; border-top: 1px solid var(--line);
+.hero .cta-row { margin-top: 2rem; }
+.hero-visual .hero-meta{
+    display:grid;
+    grid-template-columns:repeat(2,1fr);
+    gap:18px;
+    margin-top:2.5rem;
+    padding-top:2rem;
+    border-top:1px solid var(--line);
 }
-.hero-meta .stat { min-width: 40%; }
-.hero-meta .stat .num {
-  font-family: var(--font-display); font-size: clamp(1.5rem, 3vw, 2rem); letter-spacing: -0.02em;
-}
-.hero-meta .stat .lbl { color: var(--muted); font-size: .82rem; }
 
-@media (max-width: 600px) {
-  .hero-meta { gap: 1.25rem; margin-top: 2.25rem; }
-  .hero-meta .stat { min-width: 45%; }
+.hero-visual .stat{
+    padding:22px;
+    background:#fff;
+    border:1px solid var(--line);
+    border-radius:16px;
+    transition:.3s ease;
+}
+
+.hero-visual .stat:hover{
+    transform:translateY(-4px);
+    box-shadow:0 18px 40px rgba(0,0,0,.08);
+}
+
+.hero-visual .stat .num{
+    font-family:var(--font-display);
+    font-size:2.4rem;
+    line-height:1;
+    color:var(--accent);
+    margin-bottom:8px;
+}
+
+.hero-visual .stat .lbl{
+    color:var(--muted);
+    font-size:.88rem;
+    line-height:1.5;
+}
+
+@media (max-width:768px){
+
+.hero-visual .hero-meta{
+    grid-template-columns:1fr 1fr;
+    gap:14px;
+}
+
+}
+
+@media (max-width:520px){
+
+.hero-visual .hero-meta{
+    grid-template-columns:1fr;
+}
+
 }
 
 /* ---------------------------- Section Head --------------------------- */
 .section-head {
-  display: grid;
-  grid-template-columns: 1fr 1fr;
-  align-items: center;
-  gap: 4rem;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: 1rem;
   margin-bottom: 3.5rem;
 }
-.section-head h2 { max-width: 10ch; }
+.section-head h2 { max-width: 640px; }
 .section-head .lead {
-  max-width: 42ch;
+  max-width: 640px;
   margin: 0;
-  line-height: 1.75;
-}
-
-@media (max-width: 900px) {
-  .section-head {
-    display: flex;
-    flex-direction: column;
-    align-items: flex-start;
-    gap: 1rem;
-    margin-bottom: 2rem;
-  }
-  .section-head h2,
-  .section-head .lead { max-width: 100%; }
+  line-height: 1.6;
 }
 
 /* ------------------------------- Cards ------------------------------- */
@@ -294,8 +320,8 @@ em, .italic { font-style: italic; }
 /* --------------------------- Process steps --------------------------- */
 .steps { display: grid; grid-template-columns: repeat(4, 1fr); gap: 1.25rem; position: relative; }
 .steps::before {
-  content: ""; position: absolute; top: 1.3rem; left: 2.5%; right: 22.5%;
-  border-top: 3px dashed #000; z-index: 0;
+  content: ""; position: absolute; top: 1.3rem; left: 12.5%; right: 12.5%;
+  border-top: 3px dashed var(--line); z-index: 0;
 }
 .step { padding: 0; border: 0; background: none; position: relative; z-index: 1; }
 .step .num {
@@ -457,11 +483,13 @@ em, .italic { font-style: italic; }
   padding: 1.15rem 0; background: #fff;
 }
 .marquee-track {
-  display: flex; gap: 3.5rem; white-space: nowrap;
+  display: flex; width: max-content; flex-shrink: 0;
+  gap: 3.5rem; white-space: nowrap;
   animation: scroll 40s linear infinite;
   font-family: var(--font-display); font-size: clamp(1.1rem, 2vw, 1.5rem); color: var(--muted);
+  will-change: transform;
 }
-.marquee-track span { display: inline-flex; align-items: center; gap: 3.5rem; }
+.marquee-track span { display: inline-flex; align-items: center; gap: 3.5rem; flex: none; }
 .marquee-track span::after { content: "•"; color: var(--accent); margin-left: 3.5rem; }
 @keyframes scroll { from { transform: translateX(0); } to { transform: translateX(-50%); } }
 
@@ -602,38 +630,45 @@ em, .italic { font-style: italic; }
    ========================================================================== */
 
 /* ---- Hero: asymmetric layout with floating visual ---- */
-.hero-grid { display: grid; grid-template-columns: 1.15fr .85fr; gap: 3rem; align-items: center; }
-@media (max-width: 960px) { .hero-grid { grid-template-columns: 1fr; gap: 2.5rem; } }
+.hero-grid { display: grid; grid-template-columns: 1.1fr .9fr; gap: 4rem; align-items: center; }
+@media (max-width: 960px) { .hero-grid { grid-template-columns: 1fr; gap: 2.5rem; align-items: start; } }
 
 .hero-visual { position: relative; }
 .visual-card-main {
-  background: var(--ink); color: #fff; border-radius: var(--radius);
-  padding: 2.25rem; box-shadow: var(--shadow);
+  background: var(--ink); color: #fff; border-radius: 20px;
+  padding: 2rem 2rem 1.75rem;
+  box-shadow: 0 30px 80px -30px rgba(11,11,15,.4);
+  position: relative;
 }
+.visual-card-main::before {
+  content: ""; position: absolute; inset: 0; border-radius: 20px;
+  background: radial-gradient(120% 80% at 100% 0%, rgba(255,77,46,.18), transparent 55%);
+  pointer-events: none;
+}
+.visual-card-head { display: flex; justify-content: space-between; align-items: center; gap: 1rem; position: relative; }
 .visual-card-label { color: #b8b8bf; font-size: .85rem; }
+.visual-badge {
+  font-size: .68rem; letter-spacing: .1em; text-transform: uppercase;
+  color: #fff; background: rgba(255,255,255,.08);
+  border: 1px solid rgba(255,255,255,.14);
+  padding: .3rem .6rem; border-radius: 999px;
+}
 .visual-card-value {
-  font-family: var(--font-display); font-size: clamp(2.5rem, 4vw, 3.5rem);
-  color: var(--accent); margin-top: .5rem; letter-spacing: -0.02em;
+  font-family: var(--font-display); font-size: clamp(3rem, 5vw, 4.25rem);
+  color: var(--accent); margin-top: .5rem; letter-spacing: -0.03em; line-height: 1;
+  position: relative;
 }
-.mini-bars { display: flex; align-items: flex-end; gap: .5rem; height: 70px; margin-top: 1.75rem; }
+.mini-bars { display: flex; align-items: flex-end; gap: .45rem; height: 72px; margin-top: 1.5rem; position: relative; }
 .mini-bars span { flex: 1; background: linear-gradient(180deg, var(--accent), #ff8a6e); border-radius: 4px 4px 0 0; }
-.visual-card-float {
-  position: absolute; bottom: -1.5rem; left: -1.25rem;
-  background: #fff; border: 1px solid var(--line); border-radius: var(--radius);
-  padding: 1rem 1.25rem; display: flex; align-items: center; gap: .75rem;
-  box-shadow: var(--shadow); max-width: 230px;
+.visual-card-foot {
+  display: grid; grid-template-columns: repeat(3, 1fr); gap: 1rem;
+  margin-top: 1.75rem; padding-top: 1.25rem; border-top: 1px solid rgba(255,255,255,.12);
+  position: relative;
 }
-.pulse-dot { width: 10px; height: 10px; background: #22c55e; border-radius: 999px; position: relative; flex: none; }
-.pulse-dot::after {
-  content: ""; position: absolute; inset: -4px; border-radius: 999px;
-  background: #22c55e; opacity: .4; animation: pulse-grow 1.8s infinite;
+.visual-card-foot .vf-num {
+  font-family: var(--font-display); font-size: 1.4rem; color: #fff; letter-spacing: -0.02em;
 }
-@keyframes pulse-grow { 0% { transform: scale(1); opacity: .4; } 100% { transform: scale(2.4); opacity: 0; } }
-.visual-card-title { font-weight: 600; font-size: .88rem; }
-.visual-card-sub { color: var(--muted); font-size: .78rem; margin-top: .1rem; }
-@media (max-width: 960px) {
-  .visual-card-float { position: static; margin-top: 1.5rem; max-width: none; }
-}
+.visual-card-foot .vf-lbl { color: #b8b8bf; font-size: .72rem; margin-top: .15rem; }
 
 /* ---- About: split with founder highlight ---- */
 .about-split { display: grid; grid-template-columns: 1.2fr .8fr; gap: 3.5rem; align-items: center; }
