@@ -542,3 +542,96 @@ em, .italic { font-style: italic; }
   padding-top: clamp(3rem, 8vw, 7rem);
   padding-bottom: clamp(3rem, 8vw, 7rem);
 }
+
+/* ==========================================================================
+   Home page — enhanced layouts (additive, scoped classes only — safe for
+   other pages sharing this stylesheet)
+   ========================================================================== */
+
+/* ---- Hero: asymmetric layout with floating visual ---- */
+.hero-grid { display: grid; grid-template-columns: 1.15fr .85fr; gap: 3rem; align-items: center; }
+@media (max-width: 960px) { .hero-grid { grid-template-columns: 1fr; gap: 2.5rem; } }
+
+.hero-visual { position: relative; }
+.visual-card-main {
+  background: var(--ink); color: #fff; border-radius: var(--radius);
+  padding: 2.25rem; box-shadow: var(--shadow);
+}
+.visual-card-label { color: #b8b8bf; font-size: .85rem; }
+.visual-card-value {
+  font-family: var(--font-display); font-size: clamp(2.5rem, 4vw, 3.5rem);
+  color: var(--accent); margin-top: .5rem; letter-spacing: -0.02em;
+}
+.mini-bars { display: flex; align-items: flex-end; gap: .5rem; height: 70px; margin-top: 1.75rem; }
+.mini-bars span { flex: 1; background: linear-gradient(180deg, var(--accent), #ff8a6e); border-radius: 4px 4px 0 0; }
+.visual-card-float {
+  position: absolute; bottom: -1.5rem; left: -1.25rem;
+  background: #fff; border: 1px solid var(--line); border-radius: var(--radius);
+  padding: 1rem 1.25rem; display: flex; align-items: center; gap: .75rem;
+  box-shadow: var(--shadow); max-width: 230px;
+}
+.pulse-dot { width: 10px; height: 10px; background: #22c55e; border-radius: 999px; position: relative; flex: none; }
+.pulse-dot::after {
+  content: ""; position: absolute; inset: -4px; border-radius: 999px;
+  background: #22c55e; opacity: .4; animation: pulse-grow 1.8s infinite;
+}
+@keyframes pulse-grow { 0% { transform: scale(1); opacity: .4; } 100% { transform: scale(2.4); opacity: 0; } }
+.visual-card-title { font-weight: 600; font-size: .88rem; }
+.visual-card-sub { color: var(--muted); font-size: .78rem; margin-top: .1rem; }
+@media (max-width: 960px) {
+  .visual-card-float { position: static; margin-top: 1.5rem; max-width: none; }
+}
+
+/* ---- About: split with founder highlight ---- */
+.about-split { display: grid; grid-template-columns: 1.2fr .8fr; gap: 3.5rem; align-items: center; }
+@media (max-width: 900px) { .about-split { grid-template-columns: 1fr; gap: 2rem; } }
+.founder-card { background: var(--bg-alt); border: 1px solid var(--line); border-radius: var(--radius); padding: 2rem; }
+.founder-avatar {
+  width: 52px; height: 52px; border-radius: 999px; background: var(--ink); color: #fff;
+  display: flex; align-items: center; justify-content: center;
+  font-family: var(--font-display); font-size: 1.1rem;
+}
+.founder-quote { font-family: var(--font-display); font-size: 1.2rem; margin-top: 1.25rem; line-height: 1.4; }
+.founder-name { margin-top: 1.25rem; font-weight: 600; font-size: .9rem; color: var(--ink); }
+.founder-name span { display: block; color: var(--muted); font-weight: 400; font-size: .8rem; margin-top: .2rem; }
+.about-stat-row { display: flex; gap: 2.5rem; margin-top: 1.5rem; padding: 0 .25rem; }
+.about-stat-row .num { font-family: var(--font-display); font-size: 2rem; color: var(--accent); letter-spacing: -0.02em; }
+.about-stat-row .lbl { color: var(--muted); font-size: .8rem; margin-top: .2rem; }
+
+/* ---- Services: bento-style grid with a featured card ---- */
+.services-bento { display: grid; grid-template-columns: repeat(3, 1fr); grid-auto-rows: 1fr; gap: 1.25rem; }
+.services-bento .card.featured-lg { grid-column: span 2; }
+@media (max-width: 900px) {
+  .services-bento { grid-template-columns: 1fr 1fr; }
+  .services-bento .card.featured-lg { grid-column: span 2; }
+}
+@media (max-width: 600px) {
+  .services-bento { grid-template-columns: 1fr; }
+  .services-bento .card.featured-lg { grid-column: span 1; }
+}
+
+/* ---- Why us: numbered badges instead of plain dots ---- */
+.why-badge {
+  width: 38px; height: 38px; border-radius: 10px; background: var(--accent-soft);
+  color: var(--accent); display: flex; align-items: center; justify-content: center;
+  font-family: var(--font-display); font-weight: 600; margin-bottom: 1.1rem; font-size: .95rem;
+}
+
+/* ---- Outcomes: panel wrapper for the checklist ---- */
+.outcome-panel { background: var(--bg-alt); border: 1px solid var(--line); border-radius: var(--radius); padding: 2rem; }
+.outcome-panel .check-list { margin-top: 0; }
+@media (max-width: 600px) { .outcome-panel { padding: 1.5rem; } }
+
+/* ---- Process: connected timeline variant ---- */
+.steps-timeline { display: grid; grid-template-columns: repeat(4, 1fr); gap: 1.25rem; position: relative; }
+.steps-timeline::before {
+  content: ""; position: absolute; top: 2.65rem; left: 0; right: 0; height: 1px; background: var(--line); z-index: 0;
+}
+.steps-timeline .step { position: relative; z-index: 1; background: #fff; }
+.steps-timeline .step .num {
+  width: 2.9rem; height: 2.9rem; border-radius: 999px; border: 1px solid var(--line);
+  display: flex; align-items: center; justify-content: center; background: #fff;
+  font-size: 1rem; color: var(--ink); margin-bottom: .85rem; font-family: var(--font-display);
+}
+@media (max-width: 900px) { .steps-timeline { grid-template-columns: 1fr 1fr; } .steps-timeline::before { display: none; } }
+@media (max-width: 600px) { .steps-timeline { grid-template-columns: 1fr; } }
