@@ -292,13 +292,26 @@ em, .italic { font-style: italic; }
 @media (max-width: 700px) { .check-list { grid-template-columns: 1fr; gap: .7rem; } }
 
 /* --------------------------- Process steps --------------------------- */
-.steps { display: grid; grid-template-columns: repeat(4, 1fr); gap: 1.25rem; }
-.step { padding: 1.75rem; border: 1px solid var(--line); border-radius: var(--radius); background: #fff; }
-.step .num { font-family: var(--font-display); font-size: 1.1rem; color: var(--muted); }
-.step h3 { margin-top: .75rem; font-size: 1.2rem; }
+.steps { display: grid; grid-template-columns: repeat(4, 1fr); gap: 1.25rem; position: relative; }
+.steps::before {
+  content: ""; position: absolute; top: 1.3rem; left: 12.5%; right: 12.5%;
+  border-top: 3px dashed var(--line); z-index: 0;
+}
+.step { padding: 0; border: 0; background: none; position: relative; z-index: 1; }
+.step .num {
+  width: 2.6rem; height: 2.6rem; border-radius: 999px; background: var(--ink); color: #fff;
+  display: flex; align-items: center; justify-content: center;
+  font-family: var(--font-display); font-size: 1rem; margin-bottom: 1rem;
+  box-shadow: 0 0 0 6px #fff;
+}
+.step:last-child .num { background: var(--accent); }
+.step h3 { margin-top: 0; font-size: 1.15rem; }
 .step p { margin-top: .5rem; font-size: .95rem; }
-@media (max-width: 900px) { .steps { grid-template-columns: 1fr 1fr; gap: 1rem; } }
-@media (max-width: 600px) { .steps { grid-template-columns: 1fr; } .step { padding: 1.35rem; } }
+@media (max-width: 900px) {
+  .steps { grid-template-columns: 1fr 1fr; gap: 2rem 1.25rem; }
+  .steps::before { display: none; }
+}
+@media (max-width: 600px) { .steps { grid-template-columns: 1fr; } }
 
 /* ------------------------------ Why us ------------------------------- */
 .why-grid {
@@ -314,6 +327,9 @@ em, .italic { font-style: italic; }
 @media (max-width: 900px) { .why-grid { grid-template-columns: 1fr; } }
 @media (max-width: 600px) { .why-item { padding: 1.5rem; } }
 
+.packages-note {
+  text-align: center; color: var(--muted); font-size: .88rem; margin: -1.5rem 0 2rem;
+}
 /* --------------------------- Packages -------------------------------- */
 .packages { display: grid; grid-template-columns: repeat(3, 1fr); gap: 1.25rem; }
 .pkg {
@@ -518,9 +534,44 @@ em, .italic { font-style: italic; }
 .mt-6 { margin-top: 3rem; }
 .text-center { text-align: center; }
 
+/* ==========================================================================
+   Site-wide polish — applies to all pages sharing this stylesheet
+   ========================================================================== */
+
+/* Page hero: subtle accent glow behind the heading */
+.page-hero { position: relative; overflow: hidden; }
+.page-hero::before {
+  content: ""; position: absolute; top: -120px; right: -80px; width: 340px; height: 340px;
+  background: radial-gradient(circle, var(--accent-soft) 0%, transparent 70%);
+  pointer-events: none; z-index: 0;
+}
+.page-hero .container { position: relative; z-index: 1; }
+
+/* Cards: slightly richer hover state everywhere they're used */
+.card { position: relative; }
+.card:hover { box-shadow: 0 24px 48px -28px rgba(11, 11, 15, .22); }
+
+/* Chips: clearer affordance */
+.chip { cursor: default; }
+
+/* FAQ: subtle hover + spacing refinement */
+.faq summary:hover { color: var(--accent); }
+.faq details { transition: background var(--transition); }
+
+/* Compare table: zebra rows for readability */
+.compare tbody tr:nth-child(even) { background: var(--bg-alt); }
+
+/* Contact form: clearer focus ring */
+.form input:focus, .form textarea:focus, .form select:focus {
+  border-color: var(--accent); box-shadow: 0 0 0 3px var(--accent-soft);
+}
+
+/* CTA band: soften edges on inner content, small consistency fix */
+.cta-band { position: relative; }
+
 /* -------------------- Service Page Overrides ------------------------- */
-.steps + .section-head,
-.section-alt .section-head {
+.section-alt .section-head,
+.section-head.center {
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -528,11 +579,13 @@ em, .italic { font-style: italic; }
   gap: 1rem;
 }
 .section-alt .section-head h2,
-.section-alt .section-head .lead { max-width: 760px; }
+.section-alt .section-head .lead,
+.section-head.center h2,
+.section-head.center .lead { max-width: 760px; }
 
 @media (max-width: 900px) {
-  .steps + .section-head,
-  .section-alt .section-head {
+  .section-alt .section-head,
+  .section-head.center {
     align-items: flex-start;
     text-align: left;
   }
@@ -599,39 +652,50 @@ em, .italic { font-style: italic; }
 .about-stat-row .lbl { color: var(--muted); font-size: .8rem; margin-top: .2rem; }
 
 /* ---- Services: bento-style grid with a featured card ---- */
-.services-bento { display: grid; grid-template-columns: repeat(3, 1fr); grid-auto-rows: 1fr; gap: 1.25rem; }
-.services-bento .card.featured-lg { grid-column: span 2; }
+.services-bento { display: grid; grid-template-columns: repeat(3, 1fr); gap: 1.25rem; }
+.services-bento .card.featured-lg {
+  grid-column: span 2;
+  flex-direction: row; align-items: center; gap: 2rem;
+  background: var(--ink); color: #fff; border-color: var(--ink);
+  padding: 2.25rem 2.5rem;
+}
+.services-bento .card.featured-lg .num { color: var(--accent); font-size: 3rem; flex: none; }
+.services-bento .card.featured-lg .card-body { flex: 1; }
+.services-bento .card.featured-lg h3 { color: #fff; font-size: clamp(1.4rem, 2.2vw, 1.9rem); }
+.services-bento .card.featured-lg p { color: #b8b8bf; font-size: 1rem; max-width: 52ch; margin-top: .5rem; }
+.services-bento .card.featured-lg .link { color: #fff; margin-top: 1rem; }
+.services-bento .card.featured-lg:hover { border-color: var(--accent); }
 @media (max-width: 900px) {
   .services-bento { grid-template-columns: 1fr 1fr; }
-  .services-bento .card.featured-lg { grid-column: span 2; }
+  .services-bento .card.featured-lg { grid-column: span 2; flex-direction: column; align-items: flex-start; gap: 1rem; }
 }
 @media (max-width: 600px) {
   .services-bento { grid-template-columns: 1fr; }
   .services-bento .card.featured-lg { grid-column: span 1; }
 }
 
-/* ---- Why us: numbered badges instead of plain dots ---- */
+/* ---- Why us: bold numbered badges instead of plain dots ---- */
+.why-item { position: relative; }
 .why-badge {
-  width: 38px; height: 38px; border-radius: 10px; background: var(--accent-soft);
-  color: var(--accent); display: flex; align-items: center; justify-content: center;
-  font-family: var(--font-display); font-weight: 600; margin-bottom: 1.1rem; font-size: .95rem;
+  width: 44px; height: 44px; border-radius: 999px; background: var(--ink);
+  color: #fff; display: flex; align-items: center; justify-content: center;
+  font-family: var(--font-display); font-weight: 500; margin-bottom: 1.25rem; font-size: 1.05rem;
+  transition: background var(--transition), transform var(--transition);
 }
+.why-item:hover .why-badge { background: var(--accent); transform: scale(1.08); }
 
 /* ---- Outcomes: panel wrapper for the checklist ---- */
-.outcome-panel { background: var(--bg-alt); border: 1px solid var(--line); border-radius: var(--radius); padding: 2rem; }
-.outcome-panel .check-list { margin-top: 0; }
+.outcome-panel {
+  background: var(--ink); border: 1px solid var(--ink); border-radius: var(--radius);
+  padding: 2.25rem;
+}
+.outcome-panel .panel-label {
+  color: #8b8b93; font-size: .75rem; text-transform: uppercase; letter-spacing: .14em; font-weight: 500;
+  display: block; margin-bottom: 1.25rem;
+}
+.outcome-panel .check-list { margin-top: 0; grid-template-columns: 1fr; gap: .75rem; }
+.outcome-panel .check-list li { color: #e4e4e8; font-size: .95rem; }
+.outcome-panel .check-list li::before { background: var(--accent); }
 @media (max-width: 600px) { .outcome-panel { padding: 1.5rem; } }
 
-/* ---- Process: connected timeline variant ---- */
-.steps-timeline { display: grid; grid-template-columns: repeat(4, 1fr); gap: 1.25rem; position: relative; }
-.steps-timeline::before {
-  content: ""; position: absolute; top: 2.65rem; left: 0; right: 0; height: 1px; background: var(--line); z-index: 0;
-}
-.steps-timeline .step { position: relative; z-index: 1; background: #fff; }
-.steps-timeline .step .num {
-  width: 2.9rem; height: 2.9rem; border-radius: 999px; border: 1px solid var(--line);
-  display: flex; align-items: center; justify-content: center; background: #fff;
-  font-size: 1rem; color: var(--ink); margin-bottom: .85rem; font-family: var(--font-display);
-}
-@media (max-width: 900px) { .steps-timeline { grid-template-columns: 1fr 1fr; } .steps-timeline::before { display: none; } }
-@media (max-width: 600px) { .steps-timeline { grid-template-columns: 1fr; } }
+
