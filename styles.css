@@ -320,7 +320,7 @@ em, .italic { font-style: italic; }
 /* --------------------------- Process steps --------------------------- */
 .steps { display: grid; grid-template-columns: repeat(4, 1fr); gap: 1.25rem; position: relative; }
 .steps::before {
-  content: ""; position: absolute; top: 1.3rem; left: 12.5%; right: 12.5%;
+  content: ""; position: absolute; top: 1.3rem; left: 2.5%; right: 22.5%;
   border-top: 3px dashed #000; z-index: 0;
 }
 .step { padding: 0; border: 0; background: none; position: relative; z-index: 1; }
