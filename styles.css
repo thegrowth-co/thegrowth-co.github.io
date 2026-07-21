@@ -1,363 +1,749 @@
-<!doctype html>
-<html lang="en">
-<head>
-<meta charset="utf-8" />
-<meta name="viewport" content="width=device-width,initial-scale=1" />
-<title>Digital Marketing Company in Ulwe, Navi Mumbai | TheGrowthCo</title>
-<meta name="description" content="TheGrowthCo is a digital marketing company in Ulwe offering SEO, website development & social media marketing to help businesses generate leads." />
-<meta property="og:title" content="Digital Marketing Company in Ulwe, Navi Mumbai — TheGrowthCo." />
-<meta property="og:description" content="TheGrowthCo. — a digital marketing company in Ulwe, Navi Mumbai helping businesses grow online with website development, SEO, Google Ads, Meta Ads, content and social media." />
-<meta property="og:type" content="website" />
-<link rel="canonical" href="https://thegrowth-co.github.io/">
-<meta name="robots" content="index, follow, max-image-preview:large">
-<meta name="twitter:card" content="summary_large_image" />
-<link rel="icon" href="favicon.ico" sizes"any" />
-<link rel="preconnect" href="https://fonts.googleapis.com" />
-<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-<link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,400;0,9..144,500;1,9..144,400&family=Inter:wght@400;500;600&display=swap" rel="stylesheet" />
-<link rel="stylesheet" href="styles.css">
-<meta name="google-site-verification" content="o_NvVCKQ4G-c2lNjO3mBdPPQa1mJjjipnos2mBvZntg" />
-  <!-- Google Tag Manager -->
-<script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
-new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
-j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
-'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
-})(window,document,'script','dataLayer','GTM-TDW6W9L7');</script>
-<!-- End Google Tag Manager -->
-</head>
-<body class="">
-<!-- Google Tag Manager (noscript) -->
-<noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-TDW6W9L7"
-height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
-<!-- End Google Tag Manager (noscript) -->
-<header class="site-header">
-  <div class="container nav">
-    <a href="index.html" class="brand">
-    <img src="TheGrowthCo_Prime_Logo_-_Black_and_Orange"
-         alt="TheGrowthCo Logo"
-         class="brand-logo">
-</a>
-</a>
-    <nav class="nav-links" aria-label="Primary">
-      <a href="index.html" data-path="index.html">Home</a>
-      <a href="about.html" data-path="about.html">About</a>
-      <a href="services.html" data-path="services.html">Services</a>
-      <a href="packages.html" data-path="packages.html">Packages</a>
-      <a href="contact.html" data-path="contact.html">Contact</a>
-      <a href="https://calendar.app.google/myzEHbwvACfUvap1A" class="btn btn-primary">Book a Free Consultation <span class="arrow">↗</span></a>
-    </nav>
-    <button class="nav-toggle" aria-label="Toggle navigation" aria-expanded="false"><span></span></button>
-  </div>
-</header>
-<section class="hero">
-  <div class="container hero-grid">
-    <div class="hero-content">
-      <span class="eyebrow reveal">Digital Marketing Company — Ulwe, Navi Mumbai</span>
-      <h1>Digital Marketing Agency in <em>Ulwe</em> Helping Local Businesses Generate More Leads</h1>
-      <p class="lead mt-3 reveal">We help businesses in Ulwe, Navi Mumbai, and beyond grow with result-driven digital marketing. From high-converting websites and SEO to Google Ads and social media marketing, every strategy is focused on one goal—generating qualified leads that turn into real customers.</p>
+/* ==========================================================================
+   TheGrowthCo. — unified stylesheet
+   Modern, minimalistic agency look. White base + bold accent.
+   Cleaned + mobile-optimised.
+   ========================================================================== */
 
-      <div class="cta-row reveal">
-        <a href="https://calendar.app.google/myzEHbwvACfUvap1A" class="btn btn-dark">Book a Free Consultation <span class="arrow">↗</span></a>
-        <a href="services.html" class="btn btn-outline">Explore Services</a>
-      </div>
-    </div>
-    <div class="hero-visual reveal">
-      <div class="visual-card-main">
-        <div class="visual-card-head">
-          <div class="visual-card-label">Avg. organic traffic growth</div>
-          <span class="visual-badge">Last 6 months</span>
-        </div>
-        <div class="visual-card-value">+184%</div>
-        <div class="mini-bars" aria-hidden="true">
-          <span style="height:32%"></span><span style="height:48%"></span><span style="height:40%"></span>
-          <span style="height:62%"></span><span style="height:55%"></span><span style="height:78%"></span>
-          <span style="height:92%"></span><span style="height:100%"></span>
-        </div>
-        <div class="visual-card-foot">
-          <div><div class="vf-num">3.6×</div><div class="vf-lbl">Qualified leads</div></div>
-          <div><div class="vf-num">−41%</div><div class="vf-lbl">Cost per lead</div></div>
-          <div><div class="vf-num">#1–3</div><div class="vf-lbl">Local rankings</div></div>
-        </div>
-      </div>
-      <div class="hero-meta reveal">
-        <div class="stat"><div class="num">20+</div><div class="lbl">Projects delivered</div></div>
-        <div class="stat"><div class="num">7+</div><div class="lbl">Business websites</div></div>
-        <div class="stat"><div class="num">4+</div><div class="lbl">Industries served</div></div>
-        <div class="stat"><div class="num">98%</div><div class="lbl">Client satisfaction</div></div>
-      </div>
-    </div>
-  </div>
-</section>
+:root {
+  --bg: #ffffff;
+  --bg-alt: #f6f5f1;          /* warm off-white */
+  --ink: #0b0b0f;             /* near-black */
+  --ink-2: #2a2a30;
+  --muted: #6b6b73;
+  --line: #e7e5df;
+  --accent: #ff4d2e;          /* coral-red accent */
+  --accent-ink: #ffffff;
+  --accent-soft: #ffe6df;
+  --radius: 14px;
+  --radius-sm: 8px;
+  --max: 1240px;
+  --shadow: 0 20px 60px -30px rgba(11, 11, 15, .25);
+  --transition: 240ms cubic-bezier(.2, .7, .2, 1);
+  --font-display: "Fraunces", "Times New Roman", serif;
+  --font-sans: "Inter", ui-sans-serif, system-ui, -apple-system, "Segoe UI", Roboto, sans-serif;
+}
 
-<div class="marquee" aria-hidden="true">
-  <div class="marquee-track">
-    <span>Website Design &amp; Development</span><span>Search Engine Optimization</span>
-    <span>Google &amp; Meta Ads</span><span>Creative Content</span>
-    <span>Social Media Marketing</span><span>Local SEO</span>
-    <span>Website Design &amp; Development</span><span>Search Engine Optimization</span>
-    <span>Google &amp; Meta Ads</span><span>Creative Content</span>
-    <span>Social Media Marketing</span><span>Local SEO</span>
-  </div>
-</div>
+/* ------------------------------- Reset ------------------------------- */
+*, *::before, *::after { box-sizing: border-box; }
+* { margin: 0; }
+html {
+  scroll-behavior: smooth;
+  -webkit-text-size-adjust: 100%;
+  overflow-x: hidden;
+}
+body {
+  font-family: var(--font-sans);
+  background: var(--bg);
+  color: var(--ink);
+  line-height: 1.55;
+  font-size: 16px;
+  -webkit-font-smoothing: antialiased;
+  text-rendering: optimizeLegibility;
+  overflow-x: hidden;
+}
+img, svg { display: block; max-width: 100%; }
+a { color: inherit; text-decoration: none; }
+button { font: inherit; cursor: pointer; border: 0; background: none; color: inherit; }
+ul { list-style: none; padding: 0; }
 
-<section class="section">
-  <div class="container about-split">
-    <div class="about-copy">
-      <span class="eyebrow">About TheGrowthCo.</span>
-      <h2 class="mt-2">TheGrowthCo. – A Trusted Digital Marketing Agency in Ulwe for Business Growth</h2>
-      <div class="prose">
-        <p>Juggling five different freelancers for your website, ads and social media rarely works — messages get lost and strategy falls apart. TheGrowthCo. brings website development, SEO, paid advertising, creative content and social media under one connected strategy, so every piece works toward the same goal: growing your business.</p>
-        <p>Founded by Mohammed Sohail Sayyed, TheGrowthCo. blends agency-level expertise with a personalized, one-on-one consulting approach — built around your goals, not a one-size-fits-all package.</p>
-      </div>
-      <a href="about.html" class="btn btn-ghost mt-3">Learn more about TheGrowthCo. <span class="arrow">↗</span></a>
-    </div>
-    <div class="about-highlight reveal">
-      <div class="founder-card">
-        <div class="founder-avatar">MS</div>
-        <p class="founder-quote">“We treat every project like it's our own business — because your growth is our growth.”</p>
-        <div class="founder-name">Mohammed Sohail Sayyed<span>Founder, TheGrowthCo.</span></div>
-      </div>
-      <div class="about-stat-row">
-        <div><div class="num">20+</div><div class="lbl">Projects delivered</div></div>
-        <div><div class="num">4+</div><div class="lbl">Industries served</div></div>
-      </div>
-    </div>
-  </div>
-</section>
+/* ------------------------------- Type -------------------------------- */
+h1, h2, h3, h4 {
+  font-family: var(--font-display);
+  font-weight: 500;
+  letter-spacing: -0.02em;
+  line-height: 1.05;
+  color: var(--ink);
+}
+h1 { font-size: clamp(2.25rem, 6vw, 4rem); line-height: 1.08; }
+h2 { font-size: clamp(1.75rem, 4vw, 3.25rem); letter-spacing: -0.025em; line-height: 1.1; }
+h3 { font-size: clamp(1.2rem, 2vw, 1.6rem); letter-spacing: -0.015em; }
+h4 { font-size: 1.05rem; font-family: var(--font-sans); font-weight: 600; letter-spacing: -0.005em; }
+p  { color: var(--ink-2); }
+.lead { font-size: clamp(1rem, 1.35vw, 1.2rem); color: var(--ink-2); max-width: 60ch; }
+.eyebrow {
+  display: inline-flex; align-items: center; gap: .5rem;
+  font-size: .75rem; font-weight: 500;
+  text-transform: uppercase; letter-spacing: .16em;
+  color: var(--muted);
+}
+.eyebrow::before {
+  content: ""; width: 22px; height: 1px; background: var(--ink); display: inline-block;
+}
+em, .italic { font-style: italic; }
 
-<hr class="divider" />
+/* ------------------------------ Layout ------------------------------- */
+.container { max-width: var(--max); margin: 0 auto; padding: 0 1.5rem; }
+.section { padding: clamp(3rem, 8vw, 7rem) 0; }
+.section-tight { padding: clamp(2rem, 5vw, 4rem) 0; }
+.section-alt { background: var(--bg-alt); }
+.divider { height: 1px; background: var(--line); border: 0; margin: 0; }
 
-<section class="section">
-  <div class="container">
-    <div class="section-head">
-      <div>
-        <span class="eyebrow">Services</span>
-        <h2 class="mt-2">Digital Marketing Services in Ulwe Designed to Grow Your Business.</h2>
-      </div>
-      <p class="lead">Each service strengthens the next — your website, SEO, ads, content and social all working from the same growth playbook.</p>
-    </div>
-    <div class="services-bento">
-      <a class="card featured-lg reveal" href="website-development.html">
-        <div class="num">01</div>
-        <div class="card-body">
-          <h3>Website Design &amp; Development</h3>
-          <p>Professional, responsive websites that combine modern design, exceptional user experience, and conversion-focused development — built to turn visitors into leads.</p>
-          <span class="link">Website Design Services <span class="arrow">↗</span></span>
-        </div>
-      </a>
-      <a class="card reveal" href="seo.html">
-        <div class="num">02</div>
-        <h3>Search Engine Optimization</h3>
-        <p>Technical SEO, Local SEO and content strategies that improve rankings and drive organic growth.</p>
-        <span class="link">SEO Services <span class="arrow">↗</span></span>
-      </a>
-      <a class="card reveal" href="performance-marketing.html">
-        <div class="num">03</div>
-        <h3>Performance Marketing</h3>
-        <p>Google Ads and Meta Ads campaigns focused on lead generation and maximising ROAS.</p>
-        <span class="link">Google Ads &amp; Meta Ads <span class="arrow">↗</span></span>
-      </a>
-      <a class="card reveal" href="creative.html">
-        <div class="num">04</div>
-        <h3>Graphic, Video &amp; Content</h3>
-        <p>Graphics, marketing collateral, short-form videos and branded visuals that strengthen your identity.</p>
-        <span class="link">Creative Services <span class="arrow">↗</span></span>
-      </a>
-      <a class="card reveal" href="social-media.html">
-        <div class="num">05</div>
-        <h3>Social Media Management</h3>
-        <p>Content planning, profile optimization, publishing and audience engagement across platforms.</p>
-        <span class="link">Social Media Marketing <span class="arrow">↗</span></span>
-      </a>
-    </div>
-    <div class="mt-6 text-center">
-      <a href="services.html" class="btn btn-ghost">Explore all services <span class="arrow">↗</span></a>
-    </div>
-  </div>
-</section>
+.grid { display: grid; gap: 1.5rem; }
+.grid-2 { grid-template-columns: repeat(2, minmax(0, 1fr)); }
+.grid-3 { grid-template-columns: repeat(3, minmax(0, 1fr)); }
+.grid-4 { grid-template-columns: repeat(4, minmax(0, 1fr)); }
 
-<section class="section section-alt">
-  <div class="container">
-    <div class="section-head">
-      <div>
-        <span class="eyebrow">Why us</span>
-        <h2 class="mt-2">Why Businesses Choose Our Digital Marketing Company in Ulwe</h2>
-      </div>
-      <p class="lead">Successful digital marketing isn't about running campaigns — it's about partnering with a team that understands your business and communicates transparently.</p>
-    </div>
-    <div class="why-grid">
-      <div class="why-item"><div class="why-badge">01</div><h3>Business-first approach</h3><p>Every recommendation is aligned with your business objectives, ensuring every project contributes to measurable growth.</p></div>
-      <div class="why-item"><div class="why-badge">02</div><h3>Dedicated marketing partner</h3><p>Work directly with a dedicated professional instead of coordinating multiple freelancers or agencies.</p></div>
-      <div class="why-item"><div class="why-badge">03</div><h3>Data-driven decisions</h3><p>Every strategy is backed by research, analytics and continuous optimization — not assumptions.</p></div>
-      <div class="why-item"><div class="why-badge">04</div><h3>Transparent communication</h3><p>Clear timelines, regular updates, honest reporting and complete visibility throughout every project.</p></div>
-      <div class="why-item"><div class="why-badge">05</div><h3>Long-term growth focus</h3><p>We build websites and marketing systems that keep generating leads and opportunities long after launch.</p></div>
-      <div class="why-item"><div class="why-badge">06</div><h3>Flexible solutions</h3><p>Choose between website packages, standalone services or ongoing digital marketing support based on your goals.</p></div>
-    </div>
-  </div>
-</section>
+@media (max-width: 900px) {
+  .grid { gap: 1rem; }
+  .grid-2, .grid-3, .grid-4 { grid-template-columns: 1fr; }
+}
+@media (max-width: 600px) {
+  .container { padding: 0 1.15rem; }
+}
 
-<section class="section">
-  <div class="container">
-    <div class="two-col">
-      <div>
-        <span class="eyebrow">Outcomes</span>
-        <h2 class="mt-2">More leads. More traffic. More sales. That's the whole plan.</h2>
-        <p class="lead mt-3">At TheGrowthCo., every strategy is built around measurable business outcomes, not vanity metrics.</p>
-        <div class="cta-row mt-4">
-          <a href="contact.html" class="btn btn-primary">Let's Grow Your Business <span class="arrow">↗</span></a>
-        </div>
-      </div>
-      <div class="outcome-panel reveal">
-        <span class="panel-label">What you can expect</span>
-        <ul class="check-list">
-          <li>Increase organic website traffic</li>
-          <li>Improve Google search rankings</li>
-          <li>Generate more qualified leads</li>
-          <li>Strengthen your local online presence</li>
-          <li>Build high-converting business websites</li>
-          <li>Maximize Google Ads &amp; Meta Ads performance</li>
-          <li>Improve brand visibility across channels</li>
-          <li>Create long-term business growth</li>
-        </ul>
-      </div>
-    </div>
-  </div>
-</section>
+/* ------------------------------ Header ------------------------------- */
+.site-header {
+  position: sticky; top: 0; z-index: 50;
+  backdrop-filter: saturate(140%) blur(10px);
+  background: rgba(255, 255, 255, .85);
+  border-bottom: 1px solid var(--line);
+}
+.nav {
+  display: flex; align-items: center; justify-content: space-between;
+  height: 68px;
+  gap: 1rem;
+}
+.brand {
+  display: flex;
+  align-items: center;
+  text-decoration: none;
+}
 
-<section class="section section-alt">
-  <div class="container">
-    <div class="section-head">
-      <div>
-        <span class="eyebrow">Packages</span>
-        <h2 class="mt-2">Pick a starting point. Scale whenever you're ready.</h2>
-      </div>
-      <p class="lead">Professional web design with essential digital marketing foundations, bundled into a clear, transparent package — no hidden costs.</p>
-    </div>
-    <div class="packages-note reveal">No retainers, no surprise invoices — you know the full cost before we start.</div>
-    <div class="packages">
-      <div class="pkg reveal">
-        <span class="tag">Starter</span>
-        <div class="price">₹19,999 <small>one-time</small></div>
-        <p>For businesses that need a professional online presence without a large investment.</p>
-        <ul class="features">
-          <li>Single-page responsive website</li>
-          <li>Domain &amp; hosting assistance</li>
-          <li>Basic SEO setup</li>
-          <li>Google Business Profile setup</li>
-          <li>GA4 &amp; Search Console setup</li>
-          <li>5 social media posts</li>
-          <li>Delivery: 1–2 weeks</li>
-        </ul>
-        <a href="contact.html" class="btn btn-outline">Get started</a>
-      </div>
-      <div class="pkg featured reveal">
-        <span class="tag">Growth · Most popular</span>
-        <div class="price">₹49,999 <small>one-time</small></div>
-        <p>For businesses ready to expand with more content and stronger SEO.</p>
-        <ul class="features">
-          <li>Multi-page website (up to 5)</li>
-          <li>Advanced technical SEO</li>
-          <li>GBP, GA4 &amp; Search Console setup</li>
-          <li>10 social media posts + 2 short-form videos</li>
-          <li>Content calendar</li>
-          <li>Monthly performance report</li>
-          <li>Priority support · Delivery: 2–4 weeks</li>
-        </ul>
-        <a href="contact.html" class="btn btn-primary">Choose Growth <span class="arrow">↗</span></a>
-      </div>
-      <div class="pkg reveal">
-        <span class="tag">Premium</span>
-        <div class="price">₹89,999 <small>one-time</small></div>
-        <p>For businesses that need a custom website and comprehensive marketing foundation.</p>
-        <ul class="features">
-          <li>Custom multi-page website</li>
-          <li>Advanced SEO with ongoing optimization</li>
-          <li>GBP, GA4 &amp; Search Console setup</li>
-          <li>15 social media posts + 5 short-form videos</li>
-          <li>Monthly performance report</li>
-          <li>Priority support · Delivery: 4–6 weeks</li>
-        </ul>
-        <a href="contact.html" class="btn btn-outline">Choose Premium</a>
-      </div>
-    </div>
-    <div class="mt-6 text-center">
-      <a href="packages.html" class="btn btn-ghost">Compare all packages <span class="arrow">↗</span></a>
-    </div>
-  </div>
-</section>
+brand-logo {
+    height: 42px;
+    width: auto;
+    display: block;
+    transition: transform 0.3s ease;
+}
 
-<section class="section">
-  <div class="container">
-    <div class="section-head center">
-      <div>
-        <span class="eyebrow">Our process</span>
-        <h2 class="mt-2">From zero to growing — in four clear steps.</h2>
-      </div>
-      <p class="lead">Structured for clear communication, efficient execution, and measurable results.</p>
-    </div>
-    <div class="steps">
-      <div class="step"><div class="num">01</div><h3>Discovery</h3><p>We understand your business, goals, challenges, competitors and current digital presence.</p></div>
-      <div class="step"><div class="num">02</div><h3>Strategy</h3><p>Based on your objectives, we recommend the right services and develop a tailored roadmap.</p></div>
-      <div class="step"><div class="num">03</div><h3>Execution</h3><p>Design, development, SEO, ads, content and social — every task executed with precision.</p></div>
-      <div class="step"><div class="num">04</div><h3>Launch &amp; Grow</h3><p>Performance is monitored, improvements are implemented, and ongoing support is available.</p></div>
-    </div>
-  </div>
-</section>
-<section class="section">
-  <div class="container">
-    <div class="cta-band reveal">
-      <div>
-        <h2>Ready to Work with a Trusted Digital Marketing Company in Ulwe, Navi Mumbai?</h2>
-        <p>Book a free, no-pressure consultation. We'll look at your current presence and show you exactly where the growth is being left on the table.</p>
-      </div>
-      <div class="cta-row">
-        <a href="https://calendar.app.google/myzEHbwvACfUvap1A" class="btn btn-primary">Book a Free Consultation <span class="arrow">↗</span></a>
-        <a href="services.html" class="btn btn-outline">Explore Services</a>
-      </div>
-    </div>
-  </div>
-</section>
-<footer class="site-footer">
-  <div class="container">
-    <div class="footer-grid">
-      <div>
-        <a href="index.html" class="brand">TheGrowthCo<span class="dot" style="color:var(--accent)">.</span></a>
-        <p class="about-blurb">A digital marketing company in Ulwe, Navi Mumbai. We help startups and growing brands build a strong, sustainable online presence.</p>
-      </div>
-      <div>
-        <h4>Company</h4>
-        <ul>
-          <li><a href="about.html">About</a></li>
-          <li><a href="services.html">Services</a></li>
-          <li><a href="packages.html">Packages</a></li>
-          <li><a href="contact.html">Contact</a></li>
-        </ul>
-      </div>
-      <div>
-        <h4>Services</h4>
-        <ul>
-          <li><a href="website-development.html">Website Development</a></li>
-          <li><a href="seo.html">SEO</a></li>
-          <li><a href="performance-marketing.html">Performance Marketing</a></li>
-          <li><a href="creative.html">Graphic, Video &amp; Content</a></li>
-          <li><a href="social-media.html">Social Media Marketing</a></li>
-        </ul>
-      </div>
-      <div>
-        <h4>Get in touch</h4>
-        <ul>
-          <li>Ulwe, Navi Mumbai, India</li>
-          <li><a href="mailto:hello@thegrowthco.in">hello@thegrowthco.in</a></li>
-          <li><a href="https://calendar.app.google/Qs3WrECfbqiGXfyk9">Book a free consultation</a></li>
-        </ul>
-      </div>
-    </div>
-    <div class="footer-bottom">
-      <p>© <span id="year"></span> TheGrowthCo. All rights reserved.</p>
-      <p>Founded by Mohammed Sohail Sayyed</p>
-    </div>
-  </div>
-</footer>
-<script src="main.js"></script>
-</body>
-</html>
+.brand:hover .brand-logo {
+    transform: scale(1.03);
+}
+
+.brand .dot { color: var(--accent); }
+.nav-links { display: flex; align-items: center; gap: 2rem; }
+.nav-links a {
+  font-size: .93rem; color: var(--ink-2); transition: color var(--transition);
+}
+.nav-links a:hover, .nav-links a.active { color: var(--ink); }
+.nav-cta { display: inline-flex; align-items: center; }
+
+.nav-toggle {
+  display: none;
+  width: 44px; height: 44px;
+  align-items: center; justify-content: center;
+  border: 1px solid var(--line); border-radius: 999px;
+}
+.nav-toggle span, .nav-toggle span::before, .nav-toggle span::after {
+  content: ""; display: block; width: 18px; height: 1.5px; background: var(--ink);
+  position: relative; transition: transform var(--transition), opacity var(--transition);
+}
+.nav-toggle span::before { position: absolute; top: -6px; }
+.nav-toggle span::after  { position: absolute; top:  6px; }
+.nav-open .nav-toggle span { background: transparent; }
+.nav-open .nav-toggle span::before { transform: translateY(6px) rotate(45deg); }
+.nav-open .nav-toggle span::after  { transform: translateY(-6px) rotate(-45deg); }
+
+@media (max-width: 900px) {
+  .nav { height: 62px; }
+  .nav-toggle { display: inline-flex; }
+  .nav-links {
+    position: fixed; left: 0; right: 0; top: 62px;
+    flex-direction: column; align-items: stretch; gap: 0;
+    background: #fff; border-bottom: 1px solid var(--line);
+    padding: .75rem 1.15rem 1.5rem;
+    max-height: calc(100vh - 62px);
+    overflow-y: auto;
+    transform: translateY(-8px); opacity: 0; pointer-events: none;
+    transition: opacity var(--transition), transform var(--transition);
+    box-shadow: 0 20px 40px -20px rgba(11, 11, 15, .15);
+  }
+  .nav-links a {
+    padding: 1.05rem .25rem;
+    width: 100%;
+    border-bottom: 1px solid var(--line);
+    font-size: 1.02rem;
+    color: var(--ink);
+  }
+  .nav-links a:last-of-type { border-bottom: 0; }
+  .nav-links .btn { margin-top: 1rem; width: 100%; justify-content: center; }
+  .nav-open .nav-links { opacity: 1; transform: translateY(0); pointer-events: auto; }
+  body.nav-open { overflow: hidden; }
+}
+
+/* ------------------------------ Buttons ------------------------------ */
+.btn {
+  display: inline-flex; align-items: center; justify-content: center;
+  gap: .55rem;
+  padding: .9rem 1.25rem;
+  min-height: 46px;
+  border-radius: 999px;
+  font-size: .93rem; font-weight: 500;
+  transition: transform var(--transition), background var(--transition),
+              color var(--transition), border-color var(--transition);
+  border: 1px solid transparent;
+  white-space: nowrap;
+}
+.btn:hover { transform: translateY(-1px); }
+.btn .arrow { transition: transform var(--transition); }
+.btn:hover .arrow { transform: translate(2px, -2px); }
+.btn-primary { background: var(--accent); color: var(--accent-ink); }
+.btn-primary:hover { background: #e6421f; }
+.btn-dark { background: var(--ink); color: #fff; }
+.btn-dark:hover { background: #000; }
+.btn-outline { background: transparent; color: var(--ink); border-color: var(--ink); }
+.btn-outline:hover { background: var(--ink); color: #fff; }
+.btn-ghost { color: var(--ink); padding-left: 0; padding-right: 0; }
+.btn-ghost:hover { color: var(--accent); }
+
+.cta-row { display: flex; flex-wrap: wrap; gap: .75rem; }
+
+@media (max-width: 560px) {
+  .cta-row { gap: .6rem; }
+  .cta-row .btn { flex: 1 1 100%; }
+  .cta-row .btn-ghost { flex: 0 0 auto; }
+}
+
+/* ------------------------------- Hero -------------------------------- */
+.hero {
+  padding: clamp(2.5rem, 7vw, 6rem) 0 clamp(2.5rem, 6vw, 5rem);
+  position: relative; overflow: hidden;
+}
+.hero .eyebrow { margin-bottom: 1.25rem; }
+.hero h1 { max-width: 18ch; }
+.hero h1 em { font-style: italic; color: var(--accent); font-weight: 400; }
+.hero p.lead { margin-top: 1.25rem; }
+.hero .cta-row { margin-top: 2rem; }
+.hero-visual .hero-meta{
+    display:grid;
+    grid-template-columns:repeat(2,1fr);
+    gap:18px;
+    margin-top:2.5rem;
+    padding-top:2rem;
+    border-top:1px solid var(--line);
+}
+
+.hero-visual .stat{
+    padding:22px;
+    background:#fff;
+    border:1px solid var(--line);
+    border-radius:16px;
+    transition:.3s ease;
+}
+
+.hero-visual .stat:hover{
+    transform:translateY(-4px);
+    box-shadow:0 18px 40px rgba(0,0,0,.08);
+}
+
+.hero-visual .stat .num{
+    font-family:var(--font-display);
+    font-size:2.4rem;
+    line-height:1;
+    color:var(--accent);
+    margin-bottom:8px;
+}
+
+.hero-visual .stat .lbl{
+    color:var(--muted);
+    font-size:.88rem;
+    line-height:1.5;
+}
+
+@media (max-width:768px){
+
+.hero-visual .hero-meta{
+    grid-template-columns:1fr 1fr;
+    gap:14px;
+}
+
+}
+
+@media (max-width:520px){
+
+.hero-visual .hero-meta{
+    grid-template-columns:1fr;
+}
+
+}
+
+/* ---------------------------- Section Head --------------------------- */
+.section-head {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: 1rem;
+  margin-bottom: 3.5rem;
+}
+.section-head h2 { max-width: 640px; }
+.section-head .lead {
+  max-width: 640px;
+  margin: 0;
+  line-height: 1.6;
+}
+
+/* ------------------------------- Cards ------------------------------- */
+.card {
+  border: 1px solid var(--line);
+  border-radius: var(--radius);
+  padding: 1.75rem;
+  background: #fff;
+  transition: border-color var(--transition), transform var(--transition), box-shadow var(--transition);
+  display: flex; flex-direction: column; gap: 1rem;
+  height: 100%;
+}
+.card:hover { border-color: var(--ink); transform: translateY(-3px); box-shadow: var(--shadow); }
+.card .num {
+  font-family: var(--font-display); font-size: 2.25rem;
+  color: var(--accent); letter-spacing: -0.02em;
+}
+.card h3 { line-height: 1.15; }
+.card p { font-size: .96rem; }
+.card .link {
+  margin-top: auto; display: inline-flex; align-items: center; gap: .4rem;
+  font-weight: 500; font-size: .9rem; color: var(--ink);
+}
+.card .link .arrow { transition: transform var(--transition); }
+.card:hover .link .arrow { transform: translate(3px, -3px); }
+.card .link:hover { color: var(--accent); }
+
+.card-dark { background: var(--ink); color: #fff; border-color: var(--ink); }
+.card-dark h3, .card-dark .num { color: #fff; }
+.card-dark p { color: #b8b8bf; }
+.card-dark:hover { border-color: var(--accent); }
+
+@media (max-width: 600px) {
+  .card { padding: 1.35rem; gap: .85rem; }
+  .card .num { font-size: 1.85rem; }
+}
+
+/* ---------------------- Feature list (checkmarks) -------------------- */
+.check-list { display: grid; grid-template-columns: repeat(2, 1fr); gap: .9rem 2rem; margin-top: 1rem; }
+.check-list li {
+  display: flex; align-items: flex-start; gap: .75rem; font-size: .98rem; color: var(--ink-2);
+}
+.check-list li::before {
+  content: ""; flex: none; margin-top: .45rem; width: 16px; height: 16px;
+  background: var(--accent); border-radius: 999px;
+  mask: url("data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24'><path fill='white' d='M9 16.2l-3.5-3.6L4 14.1 9 19l11-11-1.5-1.4z'/></svg>") center/70% no-repeat;
+  -webkit-mask: url("data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24'><path fill='white' d='M9 16.2l-3.5-3.6L4 14.1 9 19l11-11-1.5-1.4z'/></svg>") center/70% no-repeat;
+}
+@media (max-width: 700px) { .check-list { grid-template-columns: 1fr; gap: .7rem; } }
+
+/* --------------------------- Process steps --------------------------- */
+.steps { display: grid; grid-template-columns: repeat(4, 1fr); gap: 1.25rem; position: relative; }
+.steps::before {
+  content: ""; position: absolute; top: 1.3rem; left: 2.5%; right: 22.5%;
+  border-top: 3px dashed #000; z-index: 0;
+}
+.step { padding: 0; border: 0; background: none; position: relative; z-index: 1; }
+.step .num {
+  width: 2.6rem; height: 2.6rem; border-radius: 999px; background: var(--ink); color: #fff;
+  display: flex; align-items: center; justify-content: center;
+  font-family: var(--font-display); font-size: 1rem; margin-bottom: 1rem;
+  box-shadow: 0 0 0 6px #fff;
+}
+.step:last-child .num { background: var(--accent); }
+.step h3 { margin-top: 0; font-size: 1.15rem; }
+.step p { margin-top: .5rem; font-size: .95rem; }
+@media (max-width: 900px) {
+  .steps { grid-template-columns: 1fr 1fr; gap: 2rem 1.25rem; }
+  .steps::before { display: none; }
+}
+@media (max-width: 600px) { .steps { grid-template-columns: 1fr; } }
+
+/* ------------------------------ Why us ------------------------------- */
+.why-grid {
+  display: grid; grid-template-columns: repeat(3, 1fr); gap: 1px;
+  background: var(--line); border: 1px solid var(--line);
+  border-radius: var(--radius); overflow: hidden;
+}
+.why-item { background: #fff; padding: 2rem; transition: background var(--transition); }
+.why-item:hover { background: var(--bg-alt); }
+.why-item h3 { font-size: 1.15rem; }
+.why-item p { margin-top: .5rem; font-size: .95rem; }
+.why-item .dot { width: 8px; height: 8px; background: var(--accent); border-radius: 999px; margin-bottom: 1rem; }
+@media (max-width: 900px) { .why-grid { grid-template-columns: 1fr; } }
+@media (max-width: 600px) { .why-item { padding: 1.5rem; } }
+
+.packages-note {
+  text-align: center; color: var(--muted); font-size: .88rem; margin: -1.5rem 0 2rem;
+}
+/* --------------------------- Packages -------------------------------- */
+.packages { display: grid; grid-template-columns: repeat(3, 1fr); gap: 1.25rem; }
+.pkg {
+  border: 1px solid var(--line); border-radius: var(--radius); padding: 2rem;
+  display: flex; flex-direction: column; gap: 1rem; background: #fff;
+  transition: transform var(--transition), border-color var(--transition), box-shadow var(--transition);
+}
+.pkg:hover { transform: translateY(-3px); border-color: var(--ink); box-shadow: var(--shadow); }
+.pkg.featured { background: var(--ink); color: #fff; border-color: var(--ink); }
+.pkg.featured h3, .pkg.featured .price { color: #fff; }
+.pkg.featured p, .pkg.featured li { color: #cfcfd4; }
+.pkg.featured .tag { background: var(--accent); color: #fff; }
+.pkg .tag {
+  align-self: flex-start; font-size: .72rem; letter-spacing: .14em; text-transform: uppercase;
+  padding: .35rem .6rem; border-radius: 999px; background: var(--bg-alt); color: var(--ink);
+  font-weight: 500;
+}
+.pkg .price {
+  font-family: var(--font-display); font-size: clamp(2rem, 4vw, 2.4rem); letter-spacing: -.02em;
+}
+.pkg .price small { font-size: .9rem; color: var(--muted); font-family: var(--font-sans); }
+.pkg ul.features li {
+  padding: .55rem 0; border-top: 1px dashed var(--line); font-size: .93rem;
+  display: flex; gap: .6rem; align-items: flex-start;
+}
+.pkg.featured ul.features li { border-color: rgba(255, 255, 255, .14); }
+.pkg ul.features li::before {
+  content: "✓"; color: var(--accent); font-weight: 700; flex: none;
+}
+.pkg .btn { margin-top: auto; align-self: stretch; justify-content: center; }
+@media (max-width: 900px) { .packages { grid-template-columns: 1fr; } }
+@media (max-width: 600px) { .pkg { padding: 1.5rem; } }
+
+/* ------------------------ Comparison table --------------------------- */
+.compare-wrap {
+  overflow-x: auto; border: 1px solid var(--line); border-radius: var(--radius);
+  -webkit-overflow-scrolling: touch;
+}
+.compare {
+  width: 100%; border-collapse: collapse; font-size: .93rem; min-width: 640px;
+}
+.compare th, .compare td {
+  padding: 1rem 1.25rem; text-align: left; border-bottom: 1px solid var(--line);
+  vertical-align: top;
+}
+.compare thead th { font-weight: 600; background: var(--bg-alt); font-family: var(--font-sans); }
+.compare tbody tr:last-child td { border-bottom: 0; }
+.compare td.check { color: var(--accent); font-weight: 700; }
+.compare .price-row td { font-family: var(--font-display); font-size: 1.35rem; letter-spacing: -.02em; }
+
+/* ----------------------------- CTA band ------------------------------ */
+.cta-band {
+  background: var(--ink); color: #fff;
+  border-radius: var(--radius); padding: clamp(2rem, 5vw, 4.5rem);
+  display: grid; grid-template-columns: 1.4fr 1fr; gap: 2rem; align-items: center;
+  overflow: hidden;
+}
+.cta-band h2 { color: #fff; max-width: 20ch; }
+.cta-band p { color: #cfcfd4; margin-top: 1rem; max-width: 45ch; }
+.cta-band .cta-row { justify-content: flex-end; }
+.cta-band .btn-outline { color: #fff; border-color: #fff; }
+.cta-band .btn-outline:hover { background: #fff; color: var(--ink); }
+@media (max-width: 800px) {
+  .cta-band { grid-template-columns: 1fr; gap: 1.5rem; padding: 2rem 1.5rem; }
+  .cta-band .cta-row { justify-content: flex-start; }
+}
+
+/* -------------------------------- FAQ -------------------------------- */
+.faq { display: flex; flex-direction: column; border-top: 1px solid var(--line); max-width: 900px; margin: auto; }
+.faq details { border-bottom: 1px solid var(--line); padding: 1.35rem 0; }
+.faq summary {
+  list-style: none; cursor: pointer;
+  display: flex; align-items: center; justify-content: space-between; gap: 1.5rem;
+  font-family: var(--font-display); font-size: clamp(1rem, 1.6vw, 1.35rem);
+  color: var(--ink);
+}
+.faq summary::-webkit-details-marker { display: none; }
+.faq summary::after {
+  content: "+"; font-family: var(--font-sans); font-size: 1.5rem;
+  transition: transform var(--transition); color: var(--accent); flex: none;
+}
+.faq details[open] summary::after { transform: rotate(45deg); }
+.faq details p { margin-top: 1rem; max-width: 75ch; }
+
+/* -------------------- Simple two-column content ---------------------- */
+.two-col { display: grid; grid-template-columns: 1.1fr 1fr; gap: 3rem; align-items: start; }
+@media (max-width: 900px) { .two-col { grid-template-columns: 1fr; gap: 1.5rem; } }
+.prose p + p { margin-top: 1rem; }
+.prose ul { display: flex; flex-direction: column; gap: .55rem; margin-top: 1rem; }
+.prose ul li { position: relative; padding-left: 1.25rem; color: var(--ink-2); }
+.prose ul li::before {
+  content: ""; position: absolute; left: 0; top: .65em; width: 8px; height: 1px; background: var(--ink);
+}
+
+/* ---------------------------- Industries ----------------------------- */
+.chips {
+  display: flex; justify-content: center; flex-wrap: wrap;
+  gap: .75rem;
+  max-width: 980px;
+  margin: 2rem auto 0;
+  padding: 2.5rem;
+  background: #fff;
+  border: 1px solid var(--line);
+  border-radius: 22px;
+}
+.chip {
+  border: 1px solid var(--line);
+  border-radius: 999px;
+  padding: .75rem 1.25rem;
+  font-size: .92rem;
+  transition: all .3s ease;
+}
+.chip:hover {
+  background: var(--ink); color: #fff; border-color: var(--ink);
+  transform: translateY(-2px);
+}
+@media (max-width: 768px) {
+  .chips { padding: 1.25rem; gap: .5rem; border-radius: 18px; }
+  .chip { padding: .6rem 1rem; font-size: .87rem; }
+}
+
+/* --------------------------- Marquee --------------------------------- */
+.marquee {
+  overflow: hidden; border-top: 1px solid var(--line); border-bottom: 1px solid var(--line);
+  padding: 1.15rem 0; background: #fff;
+}
+.marquee-track {
+  display: flex; width: max-content; flex-shrink: 0;
+  gap: 3.5rem; white-space: nowrap;
+  animation: scroll 40s linear infinite;
+  font-family: var(--font-display); font-size: clamp(1.1rem, 2vw, 1.5rem); color: var(--muted);
+  will-change: transform;
+}
+.marquee-track span { display: inline-flex; align-items: center; gap: 3.5rem; flex: none; }
+.marquee-track span::after { content: "•"; color: var(--accent); margin-left: 3.5rem; }
+@keyframes scroll { from { transform: translateX(0); } to { transform: translateX(-50%); } }
+
+/* ------------------------------ Footer ------------------------------- */
+.site-footer {
+  background: var(--ink); color: #cfcfd4; padding: 4rem 0 2rem; margin-top: 2rem;
+}
+.site-footer h4 { color: #fff; margin-bottom: 1rem; }
+.footer-grid { display: grid; grid-template-columns: 1.4fr 1fr 1fr 1fr; gap: 2rem; }
+.site-footer a { color: #cfcfd4; }
+.site-footer a:hover { color: #fff; }
+.site-footer ul { display: flex; flex-direction: column; gap: .55rem; font-size: .93rem; }
+.site-footer .brand { color: #fff; font-size: 1.5rem; }
+.site-footer .about-blurb { color: #a0a0a8; margin-top: 1rem; max-width: 34ch; font-size: .95rem; }
+.footer-bottom {
+  margin-top: 3rem; padding-top: 1.5rem; border-top: 1px solid #26262c;
+  display: flex; justify-content: space-between; gap: 1rem; flex-wrap: wrap;
+  color: #8b8b93; font-size: .85rem;
+}
+@media (max-width: 900px) { .footer-grid { grid-template-columns: 1fr 1fr; gap: 2rem 1.5rem; } }
+@media (max-width: 560px) {
+  .site-footer { padding: 3rem 0 1.5rem; }
+  .footer-grid { grid-template-columns: 1fr; gap: 2rem; }
+  .footer-bottom { flex-direction: column; align-items: flex-start; gap: .5rem; }
+}
+
+/* -------------------- Page hero (inner pages) ------------------------ */
+.page-hero { padding: clamp(2.25rem, 6vw, 5rem) 0 clamp(1.75rem, 4vw, 3rem); border-bottom: 1px solid var(--line); }
+.page-hero h1 { max-width: 20ch; font-size: clamp(1.9rem, 4.5vw, 3.75rem); }
+.page-hero .lead { margin-top: 1.15rem; }
+.page-hero .cta-row { margin-top: 1.75rem; }
+.crumbs { color: var(--muted); font-size: .85rem; margin-bottom: 1.25rem; display: flex; flex-wrap: wrap; gap: .5rem; }
+.crumbs a:hover { color: var(--ink); }
+
+/* ---------------------------- Contact form --------------------------- */
+.form { display: grid; gap: 1rem; }
+.form label { display: grid; gap: .35rem; font-size: .85rem; color: var(--muted); }
+.form input, .form textarea, .form select {
+  font: inherit; color: var(--ink); background: #fff;
+  border: 1px solid var(--line); border-radius: var(--radius-sm);
+  padding: .9rem 1rem;
+  font-size: 16px;                      /* prevents iOS input zoom */
+  transition: border-color var(--transition);
+  width: 100%;
+}
+.form input:focus, .form textarea:focus, .form select:focus {
+  outline: none; border-color: var(--ink);
+}
+.form textarea { min-height: 140px; resize: vertical; }
+.form .row-2 { display: grid; grid-template-columns: 1fr 1fr; gap: 1rem; }
+.form .btn { width: 100%; justify-content: center; }
+@media (max-width: 600px) { .form .row-2 { grid-template-columns: 1fr; } }
+
+/* ------------------------- Reveal on scroll -------------------------- */
+.reveal { opacity: 0; transform: translateY(16px); transition: opacity 700ms ease, transform 700ms ease; }
+.reveal.in { opacity: 1; transform: none; }
+
+/* Reduced motion */
+@media (prefers-reduced-motion: reduce) {
+  * { animation: none !important; transition: none !important; }
+  .reveal { opacity: 1; transform: none; }
+}
+
+/* ---------------------------- Utilities ------------------------------ */
+.text-muted { color: var(--muted); }
+.mt-1 { margin-top: .5rem; }
+.mt-2 { margin-top: 1rem; }
+.mt-3 { margin-top: 1.5rem; }
+.mt-4 { margin-top: 2rem; }
+.mt-6 { margin-top: 3rem; }
+.text-center { text-align: center; }
+
+/* ==========================================================================
+   Site-wide polish — applies to all pages sharing this stylesheet
+   ========================================================================== */
+
+/* Page hero: subtle accent glow behind the heading */
+.page-hero { position: relative; overflow: hidden; }
+.page-hero::before {
+  content: ""; position: absolute; top: -120px; right: -80px; width: 340px; height: 340px;
+  background: radial-gradient(circle, var(--accent-soft) 0%, transparent 70%);
+  pointer-events: none; z-index: 0;
+}
+.page-hero .container { position: relative; z-index: 1; }
+
+/* Cards: slightly richer hover state everywhere they're used */
+.card { position: relative; }
+.card:hover { box-shadow: 0 24px 48px -28px rgba(11, 11, 15, .22); }
+
+/* Chips: clearer affordance */
+.chip { cursor: default; }
+
+/* FAQ: subtle hover + spacing refinement */
+.faq summary:hover { color: var(--accent); }
+.faq details { transition: background var(--transition); }
+
+/* Compare table: zebra rows for readability */
+.compare tbody tr:nth-child(even) { background: var(--bg-alt); }
+
+/* Contact form: clearer focus ring */
+.form input:focus, .form textarea:focus, .form select:focus {
+  border-color: var(--accent); box-shadow: 0 0 0 3px var(--accent-soft);
+}
+
+/* CTA band: soften edges on inner content, small consistency fix */
+.cta-band { position: relative; }
+
+/* -------------------- Service Page Overrides ------------------------- */
+.section-alt .section-head,
+.section-head.center {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  gap: 1rem;
+}
+.section-alt .section-head h2,
+.section-alt .section-head .lead,
+.section-head.center h2,
+.section-head.center .lead { max-width: 760px; }
+
+@media (max-width: 900px) {
+  .section-alt .section-head,
+  .section-head.center {
+    align-items: flex-start;
+    text-align: left;
+  }
+}
+
+.section:nth-of-type(even) {
+  padding-top: clamp(3rem, 8vw, 7rem);
+  padding-bottom: clamp(3rem, 8vw, 7rem);
+}
+
+/* ==========================================================================
+   Home page — enhanced layouts (additive, scoped classes only — safe for
+   other pages sharing this stylesheet)
+   ========================================================================== */
+
+/* ---- Hero: asymmetric layout with floating visual ---- */
+.hero-grid { display: grid; grid-template-columns: 1.1fr .9fr; gap: 4rem; align-items: center; }
+@media (max-width: 960px) { .hero-grid { grid-template-columns: 1fr; gap: 2.5rem; align-items: start; } }
+
+.hero-visual { position: relative; }
+.visual-card-main {
+  background: var(--ink); color: #fff; border-radius: 20px;
+  padding: 2rem 2rem 1.75rem;
+  box-shadow: 0 30px 80px -30px rgba(11,11,15,.4);
+  position: relative;
+}
+.visual-card-main::before {
+  content: ""; position: absolute; inset: 0; border-radius: 20px;
+  background: radial-gradient(120% 80% at 100% 0%, rgba(255,77,46,.18), transparent 55%);
+  pointer-events: none;
+}
+.visual-card-head { display: flex; justify-content: space-between; align-items: center; gap: 1rem; position: relative; }
+.visual-card-label { color: #b8b8bf; font-size: .85rem; }
+.visual-badge {
+  font-size: .68rem; letter-spacing: .1em; text-transform: uppercase;
+  color: #fff; background: rgba(255,255,255,.08);
+  border: 1px solid rgba(255,255,255,.14);
+  padding: .3rem .6rem; border-radius: 999px;
+}
+.visual-card-value {
+  font-family: var(--font-display); font-size: clamp(3rem, 5vw, 4.25rem);
+  color: var(--accent); margin-top: .5rem; letter-spacing: -0.03em; line-height: 1;
+  position: relative;
+}
+.mini-bars { display: flex; align-items: flex-end; gap: .45rem; height: 72px; margin-top: 1.5rem; position: relative; }
+.mini-bars span { flex: 1; background: linear-gradient(180deg, var(--accent), #ff8a6e); border-radius: 4px 4px 0 0; }
+.visual-card-foot {
+  display: grid; grid-template-columns: repeat(3, 1fr); gap: 1rem;
+  margin-top: 1.75rem; padding-top: 1.25rem; border-top: 1px solid rgba(255,255,255,.12);
+  position: relative;
+}
+.visual-card-foot .vf-num {
+  font-family: var(--font-display); font-size: 1.4rem; color: #fff; letter-spacing: -0.02em;
+}
+.visual-card-foot .vf-lbl { color: #b8b8bf; font-size: .72rem; margin-top: .15rem; }
+
+/* ---- About: split with founder highlight ---- */
+.about-split { display: grid; grid-template-columns: 1.2fr .8fr; gap: 3.5rem; align-items: center; }
+@media (max-width: 900px) { .about-split { grid-template-columns: 1fr; gap: 2rem; } }
+.founder-card { background: var(--bg-alt); border: 1px solid var(--line); border-radius: var(--radius); padding: 2rem; }
+.founder-avatar {
+  width: 52px; height: 52px; border-radius: 999px; background: var(--ink); color: #fff;
+  display: flex; align-items: center; justify-content: center;
+  font-family: var(--font-display); font-size: 1.1rem;
+}
+.founder-quote { font-family: var(--font-display); font-size: 1.2rem; margin-top: 1.25rem; line-height: 1.4; }
+.founder-name { margin-top: 1.25rem; font-weight: 600; font-size: .9rem; color: var(--ink); }
+.founder-name span { display: block; color: var(--muted); font-weight: 400; font-size: .8rem; margin-top: .2rem; }
+.about-stat-row { display: flex; gap: 2.5rem; margin-top: 1.5rem; padding: 0 .25rem; }
+.about-stat-row .num { font-family: var(--font-display); font-size: 2rem; color: var(--accent); letter-spacing: -0.02em; }
+.about-stat-row .lbl { color: var(--muted); font-size: .8rem; margin-top: .2rem; }
+
+/* ---- Services: bento-style grid with a featured card ---- */
+.services-bento { display: grid; grid-template-columns: repeat(3, 1fr); gap: 1.25rem; }
+.services-bento .card.featured-lg {
+  grid-column: span 2;
+  flex-direction: row; align-items: center; gap: 2rem;
+  background: var(--ink); color: #fff; border-color: var(--ink);
+  padding: 2.25rem 2.5rem;
+}
+.services-bento .card.featured-lg .num { color: var(--accent); font-size: 3rem; flex: none; }
+.services-bento .card.featured-lg .card-body { flex: 1; }
+.services-bento .card.featured-lg h3 { color: #fff; font-size: clamp(1.4rem, 2.2vw, 1.9rem); }
+.services-bento .card.featured-lg p { color: #b8b8bf; font-size: 1rem; max-width: 52ch; margin-top: .5rem; }
+.services-bento .card.featured-lg .link { color: #fff; margin-top: 1rem; }
+.services-bento .card.featured-lg:hover { border-color: var(--accent); }
+@media (max-width: 900px) {
+  .services-bento { grid-template-columns: 1fr 1fr; }
+  .services-bento .card.featured-lg { grid-column: span 2; flex-direction: column; align-items: flex-start; gap: 1rem; }
+}
+@media (max-width: 600px) {
+  .services-bento { grid-template-columns: 1fr; }
+  .services-bento .card.featured-lg { grid-column: span 1; }
+}
+
+/* ---- Why us: bold numbered badges instead of plain dots ---- */
+.why-item { position: relative; }
+.why-badge {
+  width: 44px; height: 44px; border-radius: 999px; background: var(--ink);
+  color: #fff; display: flex; align-items: center; justify-content: center;
+  font-family: var(--font-display); font-weight: 500; margin-bottom: 1.25rem; font-size: 1.05rem;
+  transition: background var(--transition), transform var(--transition);
+}
+.why-item:hover .why-badge { background: var(--accent); transform: scale(1.08); }
+
+/* ---- Outcomes: panel wrapper for the checklist ---- */
+.outcome-panel {
+  background: var(--ink); border: 1px solid var(--ink); border-radius: var(--radius);
+  padding: 2.25rem;
+}
+.outcome-panel .panel-label {
+  color: #8b8b93; font-size: .75rem; text-transform: uppercase; letter-spacing: .14em; font-weight: 500;
+  display: block; margin-bottom: 1.25rem;
+}
+.outcome-panel .check-list { margin-top: 0; grid-template-columns: 1fr; gap: .75rem; }
+.outcome-panel .check-list li { color: #e4e4e8; font-size: .95rem; }
+.outcome-panel .check-list li::before { background: var(--accent); }
+@media (max-width: 600px) { .outcome-panel { padding: 1.5rem; } }
+
+
