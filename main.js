@@ -77,6 +77,5 @@ if (form) {
     submitBtn.innerHTML = 'Send message <span class="arrow">↗</span>';
   });
 }
-    });
-  }
+
 })();
