@@ -110,7 +110,7 @@ em, .italic { font-style: italic; }
 }
 
 .brand-logo {
-    height: 42px;
+    height: 90px;
     width: auto;
     display: block;
     transition: transform 0.3s ease;
