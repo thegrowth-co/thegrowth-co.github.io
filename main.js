@@ -35,14 +35,48 @@
   const y = document.getElementById('year');
   if (y) y.textContent = new Date().getFullYear();
 
-  // Contact form (client-side only, no backend)
-  const form = document.querySelector('form[data-contact]');
-  if (form) {
-    form.addEventListener('submit', (e) => {
-      e.preventDefault();
-      const status = form.querySelector('[data-status]');
-      if (status) status.textContent = "Thanks — we'll get back to you within 1 business day.";
-      form.reset();
+  // Contact form (Formspree AJAX)
+const form = document.querySelector("form[data-contact]");
+
+if (form) {
+  form.addEventListener("submit", async (e) => {
+    e.preventDefault();
+
+    const status = form.querySelector("[data-status]");
+    const submitBtn = form.querySelector('button[type="submit"]');
+
+    submitBtn.disabled = true;
+    submitBtn.textContent = "Sending...";
+
+    try {
+      const response = await fetch(form.action, {
+        method: form.method,
+        body: new FormData(form),
+        headers: {
+          Accept: "application/json"
+        }
+      });
+
+      if (response.ok) {
+        if (status) {
+          status.textContent = "✅ Thank you! Your message has been sent successfully.";
+        }
+        form.reset();
+      } else {
+        if (status) {
+          status.textContent = "❌ Something went wrong. Please try again.";
+        }
+      }
+    } catch (error) {
+      if (status) {
+        status.textContent = "❌ Network error. Please try again.";
+      }
+    }
+
+    submitBtn.disabled = false;
+    submitBtn.innerHTML = 'Send message <span class="arrow">↗</span>';
+  });
+}
     });
   }
 })();
