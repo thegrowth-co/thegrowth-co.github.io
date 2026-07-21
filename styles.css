@@ -109,7 +109,7 @@ em, .italic { font-style: italic; }
   text-decoration: none;
 }
 
-brand-logo {
+.brand-logo {
     height: 42px;
     width: auto;
     display: block;
