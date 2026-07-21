@@ -66,7 +66,17 @@
           <label>Email<input type="email" name="email" required placeholder="you@company.com" /></label>
         </div>
         <div class="row-2">
-          <label>Phone<input type="tel" name="phone" placeholder="+91 90000 00000" /></label>
+          <label>Phone
+  <input
+    type="tel"
+    name="phone"
+    placeholder="9876543210"
+    maxlength="10"
+    pattern="[0-9]{10}"
+    inputmode="numeric"
+    oninput="this.value = this.value.replace(/[^0-9]/g, '').slice(0,10);"
+  />
+</label>
           <label>Business<input type="text" name="business" placeholder="Business / brand name" /></label>
         </div>
         <label>What are you looking for?
