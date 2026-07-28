@@ -2,7 +2,7 @@ document.addEventListener("DOMContentLoaded", () => {
   const headerPlaceholder = document.getElementById("header-placeholder");
   const footerPlaceholder = document.getElementById("footer-placeholder");
 
-  fetch("header.html")
+  fetch("/header.html")
     .then(response => response.text())
     .then(html => {
       const parser = new DOMParser();
