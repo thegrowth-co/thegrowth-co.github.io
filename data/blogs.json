@@ -1,0 +1,15 @@
+{
+  "_readme": "Add one object per article to the \"posts\" array below. Newest first. Copy the shape shown in \"_example\", then create the matching page at blog/<slug>.html.",
+  "_example": {
+    "slug": "seo-checklist",
+    "title": "The local SEO checklist for small businesses",
+    "category": "SEO",
+    "excerpt": "A short summary shown on the blog card, ideally 1-2 sentences.",
+    "author": "Mohammed Sohail Sayyed",
+    "date": "2026-07-20",
+    "readTime": "8 min read",
+    "image": "/images/blog/seo-checklist.jpg",
+    "featured": true
+  },
+  "posts": []
+}

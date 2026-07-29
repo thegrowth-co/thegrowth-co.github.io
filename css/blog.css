@@ -1,0 +1,412 @@
+/* TheGrowthCo. — blog page styles */
+block can be merged into your
+   main stylesheet or kept in a separate blog.css and linked in
+   <head>.
+   ============================================================ -->
+
+<style>
+/* ---------- Brand tokens ---------- */
+:root {
+  --tg-orange: #e6421f;
+  --tg-black: #000000;
+  --tg-white: #ffffff;
+  --tg-gray-50: #f7f6f4;
+  --tg-gray-100: #efece7;
+  --tg-gray-300: #d8d4cd;
+  --tg-gray-500: #7a766f;
+  --tg-gray-700: #3a3833;
+  --tg-radius: 14px;
+  --tg-font: 'Inter', 'Helvetica Neue', Arial, sans-serif;
+}
+
+/* ---------- Page wrapper ---------- */
+.blog-page {
+  font-family: var(--tg-font);
+  color: var(--tg-black);
+  background: var(--tg-white);
+}
+
+.blog-page * { box-sizing: border-box; }
+
+.blog-page .container {
+  max-width: 1180px;
+  margin: 0 auto;
+  padding: 0 24px;
+}
+
+/* ---------- Hero ---------- */
+.blog-hero {
+  padding: 72px 0 40px;
+  text-align: center;
+  border-bottom: 1px solid var(--tg-gray-100);
+}
+
+.blog-hero .eyebrow {
+  display: inline-block;
+  font-size: 13px;
+  font-weight: 600;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  color: var(--tg-orange);
+  margin-bottom: 14px;
+}
+
+.blog-hero h1 {
+  font-size: clamp(32px, 5vw, 52px);
+  line-height: 1.1;
+  font-weight: 700;
+  margin: 0 0 16px;
+}
+
+.blog-hero h1 em {
+  color: var(--tg-orange);
+  font-style: normal;
+}
+
+.blog-hero p {
+  max-width: 560px;
+  margin: 0 auto;
+  font-size: 17px;
+  line-height: 1.6;
+  color: var(--tg-gray-700);
+}
+
+/* ---------- Category filter ---------- */
+.blog-categories {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+  justify-content: center;
+  padding: 28px 0 8px;
+}
+
+.blog-categories a,
+.blog-categories button {
+  font-family: inherit;
+  background: none;
+  cursor: pointer;
+  display: inline-block;
+  padding: 9px 18px;
+  border-radius: 999px;
+  border: 1px solid var(--tg-gray-300);
+  color: var(--tg-black);
+  font-size: 14px;
+  font-weight: 500;
+  text-decoration: none;
+  transition: background 0.2s ease, color 0.2s ease, border-color 0.2s ease;
+}
+
+.blog-categories a:hover,
+.blog-categories button:hover {
+  border-color: var(--tg-orange);
+  color: var(--tg-orange);
+}
+
+.blog-categories a.active,
+.blog-categories button.active {
+  background: var(--tg-orange);
+  border-color: var(--tg-orange);
+  color: var(--tg-white);
+}
+
+/* ---------- Featured post ---------- */
+.featured-post {
+  padding: 40px 0 20px;
+}
+
+.featured-post .card {
+  display: grid;
+  grid-template-columns: 1.1fr 1fr;
+  gap: 40px;
+  align-items: center;
+  background: var(--tg-gray-50);
+  border-radius: var(--tg-radius);
+  padding: 32px;
+}
+
+.featured-post .img-placeholder,
+.featured-post .card > img {
+  width: 100%;
+  object-fit: cover;
+  aspect-ratio: 4 / 3;
+  border-radius: 10px;
+}
+
+.featured-post .tag {
+  display: inline-block;
+  font-size: 12px;
+  font-weight: 600;
+  letter-spacing: 0.04em;
+  text-transform: uppercase;
+  color: var(--tg-orange);
+  margin-bottom: 12px;
+}
+
+.featured-post h2 {
+  font-size: clamp(22px, 3vw, 30px);
+  line-height: 1.25;
+  margin: 0 0 12px;
+  font-weight: 700;
+}
+
+.featured-post p {
+  color: var(--tg-gray-700);
+  font-size: 15px;
+  line-height: 1.6;
+  margin: 0 0 20px;
+}
+
+.featured-post .meta {
+  display: flex;
+  gap: 14px;
+  align-items: center;
+  font-size: 13px;
+  color: var(--tg-gray-500);
+  margin-bottom: 20px;
+}
+
+.featured-post .meta .dot {
+  width: 4px; height: 4px; border-radius: 50%;
+  background: var(--tg-gray-300);
+}
+
+.btn-read {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  background: var(--tg-black);
+  color: var(--tg-white);
+  text-decoration: none;
+  font-size: 14px;
+  font-weight: 600;
+  padding: 12px 22px;
+  border-radius: 999px;
+  transition: background 0.2s ease;
+}
+
+.btn-read:hover { background: var(--tg-orange); }
+
+/* ---------- Generic image placeholder ---------- */
+.img-placeholder {
+  width: 100%;
+  background: repeating-linear-gradient(
+    45deg,
+    var(--tg-gray-100),
+    var(--tg-gray-100) 10px,
+    var(--tg-gray-50) 10px,
+    var(--tg-gray-50) 20px
+  );
+  border: 1px dashed var(--tg-gray-300);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: var(--tg-gray-500);
+  font-size: 12px;
+  font-weight: 500;
+  text-transform: uppercase;
+  letter-spacing: 0.04em;
+}
+
+/* ---------- Blog grid ---------- */
+.blog-grid-section {
+  padding: 48px 0 20px;
+}
+
+.blog-grid-section .section-head {
+  display: flex;
+  align-items: baseline;
+  justify-content: space-between;
+  margin-bottom: 28px;
+}
+
+.blog-grid-section .section-head h3 {
+  font-size: 22px;
+  font-weight: 700;
+  margin: 0;
+}
+
+.blog-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 28px;
+}
+
+.post-card {
+  display: flex;
+  flex-direction: column;
+  text-decoration: none;
+  color: inherit;
+}
+
+.post-card .img-placeholder,
+.post-card > img {
+  width: 100%;
+  object-fit: cover;
+  aspect-ratio: 16 / 11;
+  border-radius: 10px;
+  margin-bottom: 16px;
+}
+
+.post-card .tag {
+  font-size: 12px;
+  font-weight: 600;
+  letter-spacing: 0.03em;
+  text-transform: uppercase;
+  color: var(--tg-orange);
+  margin-bottom: 8px;
+}
+
+.post-card h4 {
+  font-size: 17px;
+  line-height: 1.4;
+  font-weight: 700;
+  margin: 0 0 10px;
+}
+
+.post-card p {
+  font-size: 14px;
+  color: var(--tg-gray-700);
+  line-height: 1.55;
+  margin: 0 0 14px;
+}
+
+.post-card .meta {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  font-size: 12.5px;
+  color: var(--tg-gray-500);
+  margin-top: auto;
+}
+
+.post-card .meta .dot {
+  width: 4px; height: 4px; border-radius: 50%;
+  background: var(--tg-gray-300);
+}
+
+/* ---------- Load more ---------- */
+.load-more {
+  display: flex;
+  justify-content: center;
+  padding: 44px 0 64px;
+}
+
+.btn-outline {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  background: transparent;
+  color: var(--tg-black);
+  border: 1px solid var(--tg-gray-300);
+  text-decoration: none;
+  font-size: 14px;
+  font-weight: 600;
+  padding: 12px 26px;
+  border-radius: 999px;
+  cursor: pointer;
+  transition: border-color 0.2s ease, color 0.2s ease;
+}
+
+.btn-outline:hover {
+  border-color: var(--tg-orange);
+  color: var(--tg-orange);
+}
+
+/* ---------- Newsletter CTA ---------- */
+.blog-newsletter {
+  background: var(--tg-black);
+  border-radius: var(--tg-radius);
+  margin: 0 auto 72px;
+  max-width: 1180px;
+  padding: 48px;
+  display: grid;
+  grid-template-columns: 1.3fr 1fr;
+  gap: 30px;
+  align-items: center;
+}
+
+.blog-newsletter h3 {
+  color: var(--tg-white);
+  font-size: 26px;
+  margin: 0 0 10px;
+  font-weight: 700;
+}
+
+.blog-newsletter p {
+  color: var(--tg-gray-300);
+  font-size: 14.5px;
+  line-height: 1.6;
+  margin: 0;
+}
+
+.newsletter-form {
+  display: flex;
+  gap: 10px;
+}
+
+.newsletter-form input {
+  flex: 1;
+  padding: 14px 16px;
+  border-radius: 999px;
+  border: 1px solid #333;
+  background: #141414;
+  color: var(--tg-white);
+  font-size: 14px;
+}
+
+.newsletter-form input::placeholder { color: #8a8a8a; }
+
+.newsletter-form button {
+  background: var(--tg-orange);
+  color: var(--tg-white);
+  border: none;
+  padding: 14px 24px;
+  border-radius: 999px;
+  font-size: 14px;
+  font-weight: 600;
+  cursor: pointer;
+  white-space: nowrap;
+  transition: opacity 0.2s ease;
+}
+
+.newsletter-form button:hover { opacity: 0.9; }
+
+/* ---------- Responsive ---------- */
+@media (max-width: 900px) {
+  .featured-post .card {
+    grid-template-columns: 1fr;
+  }
+  .blog-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+  .blog-newsletter {
+    grid-template-columns: 1fr;
+    padding: 36px 28px;
+  }
+}
+
+@media (max-width: 600px) {
+  .blog-grid {
+    grid-template-columns: 1fr;
+  }
+  .newsletter-form {
+    flex-direction: column;
+  }
+}
+
+/* ---------- Empty / hidden states ---------- */
+.blog-page [hidden] {
+  display: none !important;
+}
+
+.blog-empty {
+  text-align: center;
+  padding: 56px 0 24px;
+  color: var(--tg-gray-500);
+}
+
+.blog-empty h3 {
+  color: var(--tg-black);
+  font-size: 22px;
+  margin: 0 0 8px;
+}
