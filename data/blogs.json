@@ -11,5 +11,17 @@
     "image": "/images/blog/seo-checklist.jpg",
     "featured": true
   },
-  "posts": []
+  "posts": [
+       {
+      "slug": "what-does-a-digital-marketing-agency-in-ulwe-actually-do",
+      "title": "What Does a Digital Marketing Agency in Ulwe Actually Do?",
+      "category": "Digital Marketing",
+      "excerpt": "Wondering what a digital marketing agency in Ulwe actually does? Learn how local SEO, social media, paid ads, website optimization, and content marketing work together to generate qualified leads and business growth.",
+      "author": "Mohammed Sohail Sayyed",
+      "date": "2026-07-29",
+      "readTime": "8 min read",
+      "image": "/images/blog/what-does-a-digital-marketing-agency-in-ulwe-actually-do.jpg",
+      "featured": true
+    }
+  ]
 }
